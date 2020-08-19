@@ -9,21 +9,30 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 
 /**
- * http://localhost:8080/Math/lastDigitOfPI
+ * Example Rest Controller
  * @author xevi
  */
 @RestController
-@RequestMapping("/Math")
-@Api(value="Math", description="Math Operations")
-public class MathController 
+@RequestMapping("/Example")
+@Api(value="Example", description="Example Operations")
+public class ExampleController 
 {
+	/**
+	 * http://localhost:8080/Example/lastDigitOfPI
+	 * @return
+	 */
 	@RequestMapping(method = RequestMethod.GET, value = "lastDigitOfPI")
 	public Character lastDigitOfPI()
 	{
-		return 'X';
+		return '7';
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = "lastDigitOfPI")
+	/**
+	 * http://localhost:8080/Example/getInfoServer
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(method = RequestMethod.GET, value = "getInfoServer")
 	public String getInfoServer() throws Exception
 	{
 		return InetAddress.getLocalHost().getHostAddress() + " " + InetAddress.getLocalHost().getCanonicalHostName();
