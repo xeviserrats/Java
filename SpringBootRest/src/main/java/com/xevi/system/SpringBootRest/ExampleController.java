@@ -35,6 +35,13 @@ public class ExampleController
 	@RequestMapping(method = RequestMethod.GET, value = "getInfoServer")
 	public String getInfoServer() throws Exception
 	{
-		return InetAddress.getLocalHost().getHostAddress() + " " + InetAddress.getLocalHost().getCanonicalHostName();
+		try
+		{
+			return InetAddress.getLocalHost().getHostAddress() + " " + InetAddress.getLocalHost().getCanonicalHostName();
+		}
+		catch(Exception e)
+		{
+			return System.getenv("HOSTNAME");
+		}
 	}
 }
