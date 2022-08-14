@@ -5,7 +5,7 @@
 
 	<groupId>com.xevi.system</groupId>
 	<artifactId>SpringBootRest</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>SpringBootRest</name>
 	<description>Demo project for Spring Boot</description>
@@ -68,6 +68,9 @@
 	</dependencies>
 
 	<build>
+			<!-- File jar name -->
+		<finalName>SpringBootRest</finalName>
+	
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
